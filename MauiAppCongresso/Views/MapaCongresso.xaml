@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCongresso.Views.MapaCongresso"
+             Title="MapaCongresso"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource SecondaryDarkText}">
+    
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10"
+                         Spacing="20">
+        <Label Text="Compre seu ingresso!"
+               FontSize="30"
+               FontFamily="OpenSans-Semibold"
+               HorizontalOptions="CenterAndExpand"
+               />
+
+        <Frame>
+            <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="* , *, *"
+              HorizontalOptions="Center">
+
+            <Label Grid.Row="0" Grid.Column="0"
+                           Text="Ingressos:"
+                           HorizontalOptions="CenterAndExpand"
+                           Margin="10"/>
+
+            <Label Grid.Row="0" Grid.Column="1"
+                           TextColor="{StaticResource MidnightBlue}"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_ingressos}"
+                           Margin="10"/>
+
+            <Stepper Grid.Row="0" Grid.Column="2"
+                             x:Name="stp_ingressos"
+                             Minimum="0"
+                             Maximum="5"
+                             Increment="1"
+                             BackgroundColor="{StaticResource White}"
+                             Margin="10"/>
+        </Grid>
+        </Frame>
+
+        <Frame Margin="10"
+               HorizontalOptions="CenterAndExpand">
+            <Grid ColumnDefinitions="* "
+                  RowDefinitions="Auto, Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="Dia do Evento: "
+                       FontFamily="OpenSans-Semibold"
+                       FontSize="20"/>
+
+
+                <Label Grid.Row="1" Grid.Column="0" 
+                       Text="13/09" 
+                       TextColor="{StaticResource MidnightBlue}"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="20"
+                       FontFamily="OpenSans-Semibold"/>
+            </Grid>
+        </Frame>
+
+        <Button Text="Comprar"
+                Clicked="Button_Clicked"
+            BackgroundColor="{StaticResource MidnightBlue}"
+            HorizontalOptions="CenterAndExpand" />
+
+        <Button Text="Voltar"
+                Clicked="Button_Clicked_1"
+                BackgroundColor="{StaticResource MidnightBlue}"
+                HorizontalOptions="CenterAndExpand" />
+    </VerticalStackLayout>
+</ContentPage>

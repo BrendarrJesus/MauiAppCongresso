@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCongresso.Views.PerfilCongresso"
+             Title="PerfilCongresso"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource PrimaryDark}">
+    
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10"
+                         Spacing="10">
+
+        <Label Text="Encontro literário"
+               TextColor="{StaticResource MidnightBlue}"
+               FontSize="40"
+               FontFamily="OpenSans-Semibold"
+               HorizontalOptions="CenterAndExpand"/>
+
+        <Label Text="Jane Austen"
+               FontSize="30"
+               FontFamily="OpenSans-Semibold"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource MidnightBlue}"/>
+
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource Secondary}">
+            <VerticalStackLayout>
+
+                <Grid RowDefinitions="Auto, Auto"
+                    ColumnDefinitions="* ">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           x:Name="DiaUm"
+                       Text="1° dia: 13/09 "
+                           HorizontalOptions="CenterAndExpand"
+                           FontFamily="OpenSans-Semibold"/>
+
+
+                </Grid>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame Padding="10"
+        BackgroundColor="{StaticResource Secondary}">
+            
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto"
+             ColumnDefinitions="*">
+
+                 <Label Grid.Row="0" Grid.Column="0"
+                       Text="Local: Shopping Piracicaba - Loja Nobel"
+                       HorizontalOptions="CenterAndExpand"
+                       />
+                    
+        </Grid>
+    </VerticalStackLayout>                   
+</Frame>
+
+        <Button Text="Comprar ingresso!"
+                Clicked="Button_Clicked"
+                BackgroundColor="BlueViolet"
+                FontFamily="OpenSans-Semibold"
+                Padding="23">
+        </Button>
+        
+        <Frame BackgroundColor="BlueViolet">
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="SOMENTE 50 VAGAS!!"
+               FontFamily="OpenSans-Semibold"
+                       FontSize="20"
+                       TextColor="White">
+                </Label>
+            </HorizontalStackLayout>
+        </Frame>
+
+
+    </VerticalStackLayout>
+</ContentPage>

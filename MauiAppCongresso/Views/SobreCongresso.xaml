@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCongresso.Views.SobreCongresso"
+             BackgroundColor="{StaticResource SecondaryDarkText}">
+    
+    
+    <VerticalStackLayout HorizontalOptions="Start">
+        <Label Text="Evento ocorre todos os anos!"
+               TextColor="{StaticResource MidnightBlue}"
+               FontFamily="OpenSans-Semibold"
+               FontSize="30"
+               HorizontalOptions="CenterAndExpand"/>
+    </VerticalStackLayout>
+</ContentPage>

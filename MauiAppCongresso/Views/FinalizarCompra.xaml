@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCongresso.Views.FinalizarCompra"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource SecondaryDarkText}">
+    
+    <VerticalStackLayout Margin="20">
+        <Label Text="Valor total dos ingressos"
+               HorizontalOptions="CenterAndExpand"
+               FontFamily="OpenSans-Semibold"
+               FontSize="25"
+               />
+
+        <Frame Margin="20">
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="{Binding ValorTotal, StringFormat='R$ {0:F2}'}"
+                        FontSize="24"
+                        TextColor="{StaticResource MidnightBlue}"
+                        HorizontalOptions="CenterAndExpand"
+                        FontFamily="OpenSans-Semibold"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Número de Ingressos: " />
+                <Label Text="{Binding NumeroIngressos}" />
+
+
+
+            </StackLayout>
+        </Frame>
+
+
+    <Label Text="Clique no botão abaixo para finalizar a compra"
+           HorizontalOptions="CenterAndExpand"
+           FontFamily="OpenSans-Semibold"
+           FontSize="20"
+           Margin="10"/>
+        <Button Text="Finalizar"
+            Clicked="Button_Clicked"
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="{StaticResource MidnightBlue}"/>
+    </VerticalStackLayout>
+</ContentPage>
